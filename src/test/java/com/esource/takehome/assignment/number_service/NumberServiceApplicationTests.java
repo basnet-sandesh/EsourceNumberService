@@ -12,6 +12,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -31,6 +32,7 @@ class NumberServiceApplicationTests {
 		// Check that 0 and 10 which were not in any of arrays are in the result
 		assertTrue(availableNumbers.contains(0));
 		assertTrue(availableNumbers.contains(10));
+		assertFalse(availableNumbers.contains(1));
 	}
 
 	@Test
